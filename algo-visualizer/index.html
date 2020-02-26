@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron text-center" style="margin-bottom:0">
+    <h1>Visualize Algorithms</h1>
+  </div>
+
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-4 menu-display">
+        <label for="searchAlgo" class="text-white">Choose Algorithm to Run</label>
+
+        <select class="custom-select" onchange="whichAlgoSelected(this)" id="algoSelector">
+          <option value="linear">Linear Search</option>
+          <option value="binary">Binary Search</option>
+          <option value="selectionSort">Selection Sort</option>
+          <option value="bubbleSort">Bubble Sort</option>
+        </select> <br><br>
+        <p id="binarySearchInfo" class="text-info" style="display: none;">Displaying a sorted dataset since precondition
+          for binary search is an sorted dataset</p>
+
+
+        <label class="text-white">Dataset Size </label>
+        <input class="form-control" type="text" id="dataSetSize" placeholder="Data Size" value="15" required><br>
+        <button class="btn btn-primary" id="generateElementsButton" onclick="generateRandomElements()">Generate Random
+          Dataset</button>
+        <br><br>
+
+        <label class="text-white">Enter Element to Search</label>
+        <input class="form-control" type="text" id="searchelement" placeholder="Search Element" required><br>
+        <button class="btn btn-primary" id="runButton" onclick="checkAlgoAndRun()">Run</button>
+        <br><br>
+        
+        <label class="text-white">Speed of Algo</label>
+        <input type="range" min="1" max="9" value="1" id="speedSlider"> <span class="text-white" id="speed"></span>
+      </div>
+      <div class="col-sm-8 element-list-display text-white" >
+        <ul id="elements" style=" display: flex; flex-wrap: wrap;">
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+<script src="./index.js"></script>
+
+</html>

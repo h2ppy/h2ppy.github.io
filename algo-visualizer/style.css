@@ -1,0 +1,29 @@
+.moveDown {
+    position: relative;
+    top: 0;
+    transition: top ease 0.5s;
+  }
+  .moveUp {
+    position: relative;
+    top: -10px;
+  }
+
+  ul#elements li {
+    display: inline;
+      border-style: solid;
+      border-color: black;
+      padding: 5px;
+      margin: 5px;
+      width: 42px;
+      text-align: center;
+  }
+
+  .element-list-display{
+    background-color: #F4B41A;
+    padding: 42px !important;
+  }
+
+  .menu-display{
+    background-color: #143D59;
+    padding: 32px !important;
+  }
